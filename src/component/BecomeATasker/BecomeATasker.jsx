@@ -1,9 +1,33 @@
 import React from 'react'
+import {Navbar,Container,Card,CardGroup} from 'react-bootstrap'
+import logo from './Logo.png'  
+import './becometasker.css'
+import footerimg1 from './1.jpg'
+import footerimg2 from './2.jpg'  
+import footerimg3 from './3.jpg'  
+
+
+
 import img from './worker-grinding-white-wall-with-sandpaper.jpg';
 
 function BecomeATasker() {
   return (
     <>
+  
+  <Navbar bg="primary">
+  <Container>
+    <Navbar.Brand href="#home">
+      <img
+        src={logo}
+        width="200"
+        className="d-inline-block align-top"
+        alt="logo"
+      />
+    </Navbar.Brand>
+  </Container>
+  </Navbar>
+  
+
     <div className="container py-5">
         <div className="row g-4">
         <div className="col-md-7">
@@ -33,6 +57,39 @@ tasking on Sahla</p>
             </div>
         </div>
     </div>
+
+    
+
+    <div >
+    <CardGroup className="text-center"   >
+    <Card border="light">
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This card has supporting text below as a natural lead-in to additional
+        content.{' '}
+      </Card.Text>
+    </Card.Body>
+    
+  </Card>
+  <Card border="light">
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This card has supporting text below as a natural lead-in to additional
+        content.{' '}
+      </Card.Text>
+    </Card.Body>
+    
+  </Card>
+  
+  
+  
+ 
+  
+</CardGroup>
+</div>
+
     </>
   )
 }
