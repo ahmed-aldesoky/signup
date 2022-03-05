@@ -1,0 +1,73 @@
+body {
+    font-family: proxima, Arial, Helvetica, sans-serif;
+}
+
+.main-Butt {
+    background-color: #24a0ed;
+    border: 0;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    height: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.2s ease;
+}
+.main-Butt:hover {
+    background-color: #196ca0;
+}
+.sec-Butt {
+    background-color: white;
+    border: #24a0ed 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    height: 40px;
+    color: #24a0ed;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.2s ease;
+}
+.sec-Butt:hover {
+    background-color: #24a0ed;
+    color: white;
+}
+.form-Con {
+    width: 40%;
+    background-color: white;
+    height: auto;
+    z-index: 1;
+    margin-top: 30px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+
+
+.link {
+    text-decoration: none;
+    text-align: center;
+}
+
+
+@media screen and (max-width:768px) and (min-width:600px) {
+    .form-Con {
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+    .form-Con {
+        width: 90%;
+    }
+    .main-Butt {
+        width: 100%;
+    }
+    .sec-Butt {
+        width: 100%;
+    }
+}

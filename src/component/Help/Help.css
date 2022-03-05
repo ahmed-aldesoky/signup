@@ -1,0 +1,25 @@
+.helpButt {
+    background-color : #24a0ed;
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.helpButt p {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.helpButt:hover {
+    transform: scale(0.9);
+}
