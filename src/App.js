@@ -4,10 +4,11 @@ import Navbar from './Navbar';
 import HomeofRegistretion from './component/HomeofRigesterion/HomeofRegistretion';
 import Login from './component/Login/Login';
 import SignUp from './component/Sign Up/SignUp';
-import { Route, Routes,Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import BecomeATasker from './component/BecomeATasker/BecomeATasker';
 import Help from './component/Help/Help';
 import Notfound from './component/Notfound';
+import Helppage from './component/Helppage';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <Route path='signup' element={<SignUp></SignUp>}/>
           <Route path='BecomeATasker' element={<BecomeATasker/>}/>
           <Route path='/*' element={<Notfound></Notfound>}/>
+          <Route path='Helppage' element={<Helppage></Helppage>}/>
+
          
 
 
