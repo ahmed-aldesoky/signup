@@ -9,6 +9,7 @@ function SignUp() {
   const emailReg = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   const passwordReg = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
   const zipReg=new RegExp(/^\d{5}(?:[- ]?\d{4})?$/)
+  const nameReg=new RegExp(/^[a-z ,.'-]+$/i)
 
 
   const [userData, setUserData] = useState({
@@ -109,22 +110,9 @@ function SignUp() {
           setError({
               ...errors,
               usernameErr:
-              e.target.value.includes(' ')?
-              "Username must not contain spaces"
+              !nameReg.test(e.target.value) ?
+              "Please Enter a valid name"
               : e.target.value.length == 0?
-              "This field is required"
-              : null
-          })
-      }
-      else if(e.target.name === "name"){
-          setUserData({
-              ...userData,
-              name: e.target.value
-          })
-          setError({
-              ...errors,
-              nameErr:
-              e.target.value.length == 0?
               "This field is required"
               : null
           })
@@ -133,15 +121,20 @@ function SignUp() {
         setUserData({
             ...userData,
             zip: e.target.value
-        })
+        });
         setError({
             ...errors,
-            nameErr:
-            e.target.value.length == 0?
-            "This field is required"
-            : null
+            zipErr:
+                !zipReg.test(e.target.value) ?
+                "Please Enter a valid zip"
+                : e.target.value.length == 0?
+                "This field is required"
+                : null
         })
-    }
+  
+  }
+    
+    
  
     
 
@@ -157,15 +150,19 @@ return (
       <img className='logo-chooser' src={logo} alt="logo"/>
       <Form className='w-75 d-flex flex-column justify-content-evenly align-item-center'>
 
-            <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Control type="text" className='form-control my-3' placeholder='First Name' required onChange={(e) => changeData(e)}/>
+            <Form.Group className="mb-3" controlId="formBasicUsername">
+            <Form.Control type="text"  name="Username" className='form-control my-3' placeholder='First Name' required onChange={(e) => changeData(e)}/>
+            <Form.Text className="text-danger">
+                        {errors.usernameErr}
+            </Form.Text>
             
+
             </Form.Group>
 
-             <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Control type="text" className='form-control my-3' placeholder='Last Name' required onChange={(e) => changeData(e)}/>
+             <Form.Group className="mb-3" controlId="formBasicUsername">
+            <Form.Control type="text"  name="Username" className='form-control my-3' placeholder='Last Name' required onChange={(e) => changeData(e)}/>
              <Form.Text className="text-danger">
-                 {errors.nameErr}
+                 {errors.usernameErr}
              </Form.Text>
              </Form.Group>
 
