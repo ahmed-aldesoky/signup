@@ -117,6 +117,22 @@ function SignUp() {
               : null
           })
       }
+
+      else if(e.target.name === "lastName"){
+        setUserData({
+            ...userData,
+            username: e.target.value
+        })
+        setError({
+            ...errors,
+            lastnameErr:
+            !nameReg.test(e.target.value) ?
+            "Please Enter a valid name"
+            : e.target.value.length == 0?
+            "This field is required"
+            : null
+        })
+    }
       else if(e.target.name === "zip"){
         setUserData({
             ...userData,
@@ -151,21 +167,21 @@ return (
       <Form className='w-75 d-flex flex-column justify-content-evenly align-item-center'>
 
             <Form.Group className="mb-3" controlId="formBasicUsername">
-            <Form.Control type="text"  name="Username" className='form-control my-3' placeholder='First Name' required onChange={(e) => changeData(e)}/>
+            <Form.Control type="text"  name="Username"  placeholder='First Name' required onChange={(e) => changeData(e)}/>
             <Form.Text className="text-danger">
                         {errors.usernameErr}
             </Form.Text>
-            
-
             </Form.Group>
+
+           
 
 
             
 
              <Form.Group className="mb-3" controlId="formBasicUsername">
-            <Form.Control type="text"  name="Username" className='form-control my-3' placeholder='Last Name' required onChange={(e) => changeData(e)}/>
+            <Form.Control type="text"  name="lastName"  placeholder='Last Name' required onChange={(e) => changeData(e)}/>
              <Form.Text className="text-danger">
-                 {errors.usernameErr}
+                 {errors.lastnameErr}
              </Form.Text>
              </Form.Group>
 
