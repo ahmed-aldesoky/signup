@@ -159,6 +159,9 @@ return (
 
             </Form.Group>
 
+
+            
+
              <Form.Group className="mb-3" controlId="formBasicUsername">
             <Form.Control type="text"  name="Username" className='form-control my-3' placeholder='Last Name' required onChange={(e) => changeData(e)}/>
              <Form.Text className="text-danger">
@@ -199,7 +202,7 @@ return (
 
 
 
-                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                <Form.Group className="mb-3" >
                     
                     <Form.Control type="text" name="zip" placeholder='ZIP code' required onChange={(e) => changeData(e)}/>
                     <Form.Text className="text-danger">
