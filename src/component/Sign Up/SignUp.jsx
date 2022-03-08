@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 function SignUp() {
 
   const emailReg = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-  const passwordReg = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+  const passwordReg = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&+]{8,}$/);
   const zipReg=new RegExp(/^\d{5}(?:[- ]?\d{4})?$/)
   const nameReg=new RegExp(/^[a-z ,.'-]+$/i)
 
@@ -38,7 +38,7 @@ function SignUp() {
               ...userData,
               email: e.target.value
           });
-          //console.log(emailReg.test(e.target.value))
+         
           setError({
               ...errors,
               emailErr:
@@ -95,13 +95,7 @@ function SignUp() {
                   : null
           })
       }
-      else if(e.target.name === "showPassword"){
-          //console.log(e.target.checked)
-          setUserData({
-              ...userData,
-              showPassword: e.target.checked
-          })
-      }
+   
       else if(e.target.name === "Username"){
           setUserData({
               ...userData,
@@ -196,7 +190,7 @@ return (
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                  
-                    <Form.Control type={`${userData.showPassword? "text" : "password"}`} name="password" placeholder='Password' required onChange={(e) => changeData(e)}/>
+                    <Form.Control type= "password" name="password" placeholder='Password' required onChange={(e) => changeData(e)}/>
                     <Form.Text className="text-danger">
                         {errors.passwordErr}
                     </Form.Text>
@@ -206,7 +200,7 @@ return (
 
                 <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                     
-                    <Form.Control type={`${userData.showPassword? "text" : "password"}`} name="confirmPassword" placeholder='confirmPassword' required onChange={(e) => changeData(e)}/>
+                    <Form.Control type="password" name="confirmPassword" placeholder='confirmPassword' required onChange={(e) => changeData(e)}/>
                     <Form.Text className="text-danger">
                         {errors.confirmPasswordErr}
                     </Form.Text>
