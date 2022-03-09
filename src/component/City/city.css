@@ -1,0 +1,74 @@
+.main-cont{
+    height: 95vh;
+    width: 100%;
+    margin-left: 100px;    
+   display: flex;
+   justify-content: center;
+    align-items: stretch;
+    position: relative;
+    border-style: dashed;
+   
+}
+.city{
+    width: 100%;
+    display: block;
+    
+}
+.searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+}
+.searchbox>input{
+    width: 30%;
+    height: 100%;
+}
+.searchbox>button{
+    width: 10%;
+    height: 100%;
+}
+
+.city-list,
+.list{
+    display: flex;
+    flex-direction: row;
+}
+.earth{
+    width:250px;
+    height: fit-content;
+   
+}
+
+
+@media screen and (max-width:600px){
+    .searchbox{
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .searchbox>input{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .searchbox>button{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+     .city-list{
+         flex-direction: column;
+         text-align: center;
+         justify-content: center;
+     }
+    
+    .earth{
+        
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -158,7 +158,7 @@ return (
       <div className='home'>
       <div  className="form-Con">
       <img className='logo-chooser' src={logo} alt="logo"/>
-      <Form className='w-75 d-flex flex-column justify-content-evenly align-item-center'>
+      <Form className='w-75 d-flex flex-column justify-content-evenly align-item-center '>
 
             <Form.Group className="mb-3" controlId="formBasicUsername">
             <Form.Control type="text"  name="Username"  placeholder='First Name' required onChange={(e) => changeData(e)}/>

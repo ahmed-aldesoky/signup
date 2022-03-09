@@ -35,8 +35,7 @@ function BecomeATasker() {
             </div>
         <div className="col-md-5">
             <h1>Earn money your way</h1>
-            <p className='fs-5'>See how much you can make
-tasking on Sahla</p>
+            <p className='fs-5'>See how much you can maketasking on Sahla</p>
     <label className='fs-5 fw-bolder' htmlFor="city">Select your area</label>
         <select id='city' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
   <option selected>Open this select menu</option>

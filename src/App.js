@@ -9,11 +9,13 @@ import BecomeATasker from './component/BecomeATasker/BecomeATasker';
 import Help from './component/Help/Help';
 import Notfound from './component/Notfound';
 import Helppage from './component/Helppage';
+import City from './component/City/City';
 
 
 function App() {
   return <>
-  <Navbar> </Navbar>
+  <City/>
+  {/* <Navbar> </Navbar>
       <Routes>  
         <Route path='home' element={<HomeofRegistretion></HomeofRegistretion>}/>
         <Route path='' element={<HomeofRegistretion></HomeofRegistretion>}/>
@@ -22,12 +24,14 @@ function App() {
           <Route path='BecomeATasker' element={<BecomeATasker/>}/>
           <Route path='/*' element={<Notfound></Notfound>}/>
           <Route path='Helppage' element={<Helppage></Helppage>}/>
+          <Route path='City' element={<City></City>}/>
+
 
          
 
 
       </Routes> 
-      <Help></Help>
+      <Help></Help> */}
   </>;
 }
 

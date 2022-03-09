@@ -16,6 +16,8 @@ export default function Navbar() {
                     <Link className="nav-item nav-link text-info" to={"BecomeATasker"}>Become Tasker</Link>
                     <Link className="nav-item nav-link text-info" to={"/*"}>Notfound</Link>
                     <Link className="nav-item nav-link text-info" to={"Helppage"}>Helppage</Link>
+                    <Link className="nav-item nav-link text-info" to={"City"}>City</Link>
+
 
 
                 </div>
