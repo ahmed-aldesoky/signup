@@ -14,7 +14,7 @@ import City from './component/City/City';
 
 function App() {
   return <>
-  
+  <Navbar> </Navbar>
   <Navbar> </Navbar>
       <Routes>  
         <Route path='home' element={<HomeofRegistretion></HomeofRegistretion>}/>
