@@ -14,8 +14,8 @@ import City from './component/City/City';
 
 function App() {
   return <>
-  <City/>
-  {/* <Navbar> </Navbar>
+  
+  <Navbar> </Navbar>
       <Routes>  
         <Route path='home' element={<HomeofRegistretion></HomeofRegistretion>}/>
         <Route path='' element={<HomeofRegistretion></HomeofRegistretion>}/>
@@ -31,7 +31,7 @@ function App() {
 
 
       </Routes> 
-      <Help></Help> */}
+      <Help></Help>
   </>;
 }
 

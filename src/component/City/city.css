@@ -1,74 +1,84 @@
-.main-cont{
-    height: 95vh;
+.p-location {
+    margin: 20px 0;
+    padding: 10px;
+    color: #0d6efd;
+    border-top: solid #0d6efd 2px;
+    border-bottom: solid #0d6efd 2px;
+    height: 50px;
     width: 100%;
-    margin-left: 100px;    
-   display: flex;
-   justify-content: center;
-    align-items: stretch;
-    position: relative;
-    border-style: dashed;
-   
+    text-align: center;
+    display: none;
 }
-.city{
-    width: 100%;
-    display: block;
-    
-}
-.searchbox{
+
+.searchbox {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 40px;
     flex-direction: row;
 }
-.searchbox>input{
+
+.searchbox>input {
     width: 30%;
     height: 100%;
 }
-.searchbox>button{
+
+.searchbox>button {
     width: 10%;
     height: 100%;
 }
 
+.city-list {
+    margin: auto;
+}
+
 .city-list,
-.list{
+.list {
     display: flex;
     flex-direction: row;
-}
-.earth{
-    width:250px;
-    height: fit-content;
-   
+    flex-wrap: wrap;
+    margin: auto;
+
 }
 
+.list {
+    margin: auto;
+}
 
-@media screen and (max-width:600px){
-    .searchbox{
-        width: 100%;
-        flex-direction: column;
-
-    }
-    .searchbox>input{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .searchbox>button{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-     .city-list{
-         flex-direction: column;
-         text-align: center;
-         justify-content: center;
-     }
+.earth {
+    display: block;
+    margin: 30px auto;
     
-    .earth{
-        
-        width: 50%;
+}
+
+
+@media screen and (max-width:600px) {
+    .searchbox {
+        margin: auto;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .searchbox>input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+
+    }
+
+    .searchbox>button {
+        width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 10px;
+    }
+
+
+    
+    
+
+
+    .p-location {
+        display: block;
+
     }
 }
