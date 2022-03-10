@@ -14,8 +14,12 @@ import City from './component/City/City';
 
 function App() {
   return <>
+
   
   
+
+  
+
   <Navbar> </Navbar>
       <Routes>  
         <Route path='home' element={<HomeofRegistretion></HomeofRegistretion>}/>
